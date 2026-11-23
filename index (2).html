@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DenisZer0 Notícias - GTA 6</title>
+<meta name="description" content="Notícias, trailers, rumores e guias de GTA 6.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050408;--ind:#161454;--moss:#3E5652;--brn:#591810;--red:#B6371B;--fg:#F8F8F7;--mut:#BAB4A0;--sl:#6D718F;--pan:#0d0b26;--ln:#24234f}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3,.brand{font-family:"Space Grotesk",sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.w{max-width:1160px;margin:auto;padding:0 20px}
+.mut{color:var(--mut)}
+header{border-bottom:1px solid var(--ln)}
+.hd{display:flex;align-items:center;gap:20px;min-height:68px;flex-wrap:wrap;padding:8px 0}
+.brand{font-weight:700;font-size:1.4rem}.brand b{color:var(--red)}
+nav{display:flex;gap:4px;flex:1;overflow-x:auto}
+nav button,.chip{background:none;border:0;padding:6px 14px;border-radius:99px;color:var(--mut);white-space:nowrap}
+nav button:hover,.chip:hover{color:var(--fg)}
+nav button.on,.chip.on{background:var(--red);color:var(--fg)}
+#acct{display:flex;gap:8px}
+.btn{background:var(--red);border:0;padding:9px 16px;border-radius:8px;font-weight:600}
+.btn:hover{background:#cc4122}
+.btn.g{background:none;border:1px solid var(--sl)}.btn.g:hover{background:var(--ind)}
+#ban{background:var(--brn);padding:10px 0;font-size:.95rem}#ban .w{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.tag{display:inline-block;font-size:.82rem;font-weight:600;background:var(--brn);padding:2px 10px;border-radius:99px}
+.th{position:relative;aspect-ratio:16/10;background:var(--c);border-radius:10px;overflow:hidden;display:grid;place-items:center}
+.th span{font:700 clamp(1.4rem,4vw,2.4rem) "Space Grotesk";opacity:.22}
+.th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;padding:44px 0;align-items:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.6rem);margin:14px 0}
+.hero p{max-width:46ch;margin-bottom:22px}
+.main{display:grid;grid-template-columns:1fr 300px;gap:40px;padding-bottom:60px}
+h2{font-size:1.6rem;margin:8px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 26px}
+.card{display:block}.card h3{font-size:1.28rem;margin:12px 0 6px}.card:hover h3{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
+.card .mut{font-size:.92rem}
+aside .box{background:var(--pan);border:1px solid var(--ln);border-radius:10px;padding:20px;margin-bottom:20px}
+aside h3{font-size:1.1rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips .chip{border:1px solid var(--ln)}
+.art{max-width:720px;margin:40px auto 60px}
+.art h1{font-size:clamp(2rem,5vw,3rem);margin:14px 0 8px}
+.art .th{margin:24px 0}.art p{margin-bottom:1.1em;font-size:1.08rem}
+.back{display:inline-block;color:var(--mut);margin-bottom:18px}.back:hover{color:var(--fg)}
+.empty{padding:60px 0;color:var(--mut)}
+footer{border-top:1px solid var(--ln);padding:28px 0;color:var(--mut);font-size:.92rem}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+dialog{background:var(--pan);color:var(--fg);border:1px solid var(--ln);border-radius:14px;padding:24px;width:min(460px,94vw);margin:auto}
+dialog::backdrop{background:rgba(5,4,8,.82)}
+#adm{width:min(940px,96vw);max-height:92vh}
+dialog h2{margin:0 0 14px}
+label{display:block;margin:12px 0 4px;color:var(--mut);font-size:.92rem}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--ln);color:var(--fg);padding:10px 12px;border-radius:8px;font:inherit}
+textarea{min-height:150px;resize:vertical}
+input[type=checkbox]{width:auto;margin-right:8px}
+.tabs{display:flex;gap:6px;margin-bottom:6px}
+.acts{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.lnk{background:none;border:0;color:var(--mut);text-decoration:underline;padding:0;margin-top:12px}
+.adm{display:grid;grid-template-columns:300px 1fr;gap:28px}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln)}
+.row span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .btn{padding:4px 10px;font-size:.85rem}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:8px;font-weight:600;z-index:9;max-width:92vw}
+.adm[hidden]{display:none}
+.ad{margin:20px 0;text-align:center}.ad small{display:block;color:var(--mut);font-size:.78rem;margin-bottom:6px}
+.ad img{display:block;max-width:100%;margin:auto;border-radius:10px}.ad.topo img{width:100%;max-height:140px;object-fit:cover}
+.ad b{display:block;padding:26px 16px;border:1px dashed var(--sl);border-radius:10px}
+.ad.meio{grid-column:1/-1}.ad.fim{margin:36px 0}.box .ad{margin:0}
+.lk{list-style:none;padding:0}.lk li{padding:8px 0;border-bottom:1px solid var(--ln)}.lk li:last-child{border:0}.lk a{color:var(--mut)}.lk a:hover{color:var(--fg)}
+.art p a{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+@media(max-width:860px){.hero,.main,.adm{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero{padding:28px 0}}
+</style>
+</head>
+<body>
+<!-- Regras do Firestore: veja o arquivo firestore.rules -->
+<div id="ban" hidden><div class="w"><span>Verifique seu e-mail para liberar o painel Adm.</span>
+<button class="btn g" data-a="resend">Reenviar e-mail</button><button class="btn g" data-a="reload">Já verifiquei</button></div></div>
+<header><div class="w hd">
+  <a class="brand" href="#/" data-a="cat" data-v="">DenisZer0 <b>Notícias</b></a>
+  <nav aria-label="Categorias"></nav>
+  <div id="acct"></div>
+</div></header>
+<main class="w" id="app"></main>
+<footer><div class="w"><span>DenisZer0 Notícias. Site de fãs, sem vínculo com a Rockstar Games ou a Take-Two.</span><span>GTA é marca de seus respectivos donos.</span></div></footer>
+
+<dialog id="auth"><form id="af">
+  <h2>Entrar no blog</h2>
+  <div class="tabs"><button type="button" class="chip on" data-a="tab" data-v="in">Entrar</button><button type="button" class="chip" data-a="tab" data-v="new">Criar conta</button></div>
+  <label for="em">E-mail</label><input id="em" type="email" autocomplete="email" required>
+  <label for="pw">Senha</label><input id="pw" type="password" autocomplete="current-password" minlength="6" required>
+  <div class="acts"><button class="btn" id="go">Entrar</button><button type="button" class="btn g" data-a="google">Entrar com Google</button></div>
+  <button type="button" class="lnk" data-a="reset">Esqueci minha senha</button>
+  <button type="button" class="lnk" data-a="close" style="float:right">Fechar</button>
+</form></dialog>
+
+<dialog id="adm"><div class="tabs" id="atabs" style="margin-bottom:14px"><button type="button" class="chip on" data-a="atab" data-v="p">Postagens</button><button type="button" class="chip" data-a="atab" data-v="x">Anúncios e links</button></div>
+<div class="adm" id="ppane">
+  <div><h2>Postagens</h2><button class="btn" data-a="new" style="margin-bottom:10px">Nova postagem</button><div id="admList"></div></div>
+  <form id="pf"><h2 id="pft">Nova postagem</h2>
+    <label for="t">Título</label><input id="t" name="title" required maxlength="140">
+    <label for="c">Categoria</label><select id="c" name="category"></select>
+    <label for="i">Link da imagem (https)</label><input id="i" name="image" type="url" placeholder="https://...">
+    <label for="s">Resumo</label><input id="s" name="summary" maxlength="220" required>
+    <label for="b">Texto (linha em branco separa parágrafos)</label><button type="button" class="btn g" data-a="mklink" style="margin-bottom:6px;padding:4px 10px">Inserir link no texto</button><textarea id="b" name="content" required></textarea>
+    <label><input type="checkbox" name="featured">Destaque na página inicial</label>
+    <div class="acts"><button class="btn">Salvar</button><button type="button" class="btn g" data-a="close">Fechar</button></div>
+  </form>
+</div>
+<div class="adm" id="xpane" hidden>
+  <div><h2>Cadastrados</h2><button class="btn" data-a="xnew" style="margin-bottom:10px">Novo item</button><div id="xList"></div></div>
+  <form id="xf"><h2 id="xft">Novo anúncio ou link</h2>
+    <label for="xt">Tipo</label><select id="xt" name="type"><option value="ad">Anúncio (banner)</option><option value="link">Link na lateral</option></select>
+    <label for="xti">Título</label><input id="xti" name="title" required maxlength="140">
+    <label for="xu">Link de destino (https)</label><input id="xu" name="url" type="url" required placeholder="https://...">
+    <label for="xi">Imagem do banner (https, só para anúncio)</label><input id="xi" name="image" type="url" placeholder="https://...">
+    <label for="xs">Onde o anúncio aparece</label><select id="xs" name="slot"><option value="topo">Topo da página</option><option value="lateral">Lateral</option><option value="meio">Entre as postagens</option><option value="fim">Fim da matéria</option></select>
+    <div class="acts"><button class="btn">Salvar</button><button type="button" class="btn g" data-a="close">Fechar</button></div>
+  </form>
+</div></dialog>
+<div id="toast" hidden></div>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import {getFirestore,collection,query,orderBy,onSnapshot,addDoc,updateDoc,deleteDoc,doc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+/* ===== CONFIGURE AQUI ===== */
+const CONFIG={apiKey:"AIzaSyBo06-WA0aL397EflJTgK_aR29Yyx2F0mw",authDomain:"click-clack-923e3.firebaseapp.com",projectId:"click-clack-923e3",storageBucket:"click-clack-923e3.firebasestorage.app",messagingSenderId:"536238319651",appId:"1:536238319651:web:a1b5a29c8b11f6501a2996",measurementId:"G-NM3T8SS0YZ"};
+const ADMINS=["seu-email@gmail.com"];
+const ADSENSE={client:"",slot:""}; // opcional: ex. client:"ca-pub-123...", slot:"456..."
+/* ========================== */
+
+const CATS=["Notícias","Trailers","Rumores","Guias","Análises"];
+const COL=["#161454","#591810","#3E5652","#2b2e47","#3a1612"];
+const live=!CONFIG.apiKey.startsWith("COLE");
+const adm=ADMINS.map(e=>e.toLowerCase());
+let auth,db;if(live){const app=initializeApp(CONFIG);auth=getAuth(app);db=getFirestore(app)}
+const now=new Date();
+const DEMO=[
+ ["Exemplo de destaque: o que já sabemos sobre Leonida","Notícias","Este é um texto de exemplo. Conecte o Firebase para publicar suas próprias matérias.",1],
+ ["Exemplo: análise do trailer, cena por cena","Trailers","Texto de exemplo para a lista de últimas publicações."],
+ ["Exemplo: rumor da semana e como checar a fonte","Rumores","Texto de exemplo para a lista de últimas publicações."],
+ ["Exemplo: guia para acompanhar as novidades","Guias","Texto de exemplo para a lista de últimas publicações."]
+].map((x,n)=>({id:"d"+n,title:x[0],category:x[1],summary:x[2],content:x[2]+"\n\nConteúdo de demonstração.",featured:!!x[3],createdAt:now}));
+
+const DEMOX=[{id:"e0",type:"ad",slot:"lateral",title:"Espaço para o seu anúncio",url:"https://example.com"},{id:"e1",type:"link",title:"Site oficial da Rockstar Games",url:"https://www.rockstargames.com"}];
+let posts=live?[]:DEMO,extras=live?[]:DEMOX,user=null,cat="",editing=null,xedit=null,mode="in";const R=Math.random();
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safe=u=>/^https?:\/\//i.test(u||"")?u:"";
+const isAdm=()=>!!user&&adm.includes((user.email||"").toLowerCase())&&user.emailVerified;
+const fd=p=>{const d=p.createdAt?.toDate?.()||(p.createdAt instanceof Date?p.createdAt:null);return d?d.toLocaleDateString("pt-BR",{day:"numeric",month:"short",year:"numeric"}):"agora"};
+const toast=m=>{const t=$("#toast");t.textContent=m;t.hidden=false;clearTimeout(toast.k);toast.k=setTimeout(()=>t.hidden=true,3500)};
+const th=p=>`<div class="th" style="--c:${COL[Math.max(0,CATS.indexOf(p.category))]}"><span>${esc(p.category)}</span>${safe(p.image)?`<img src="${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()">`:""}</div>`;
+const card=p=>`<a class="card" href="#/post/${p.id}">${th(p)}<h3>${esc(p.title)}</h3><p class="mut">${esc(p.category)}, ${fd(p)}</p><p>${esc(p.summary)}</p></a>`;
+
+const body=t=>esc(t).split(/\n{2,}/).map(x=>`<p>${x.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>').replace(/\n/g,"<br>")}</p>`).join("");
+const ad=s=>{const l=extras.filter(x=>x.type==="ad"&&x.slot===s&&safe(x.url));
+ if(l.length){const a=l[Math.floor(R*l.length)];return `<div class="ad ${s}"><small>Publicidade</small><a href="${esc(a.url)}" target="_blank" rel="sponsored noopener">${safe(a.image)?`<img src="${esc(a.image)}" alt="${esc(a.title)}" loading="lazy">`:`<b>${esc(a.title)}</b>`}</a></div>`}
+ return ADSENSE.client?`<div class="ad ${s}"><small>Publicidade</small><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ADSENSE.client)}" data-ad-slot="${esc(ADSENSE.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins></div>`:""};
+function initAds(){if(!ADSENSE.client)return;if(!initAds.s){initAds.s=1;const e=document.createElement("script");e.async=true;e.crossOrigin="anonymous";e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+ADSENSE.client;document.head.appendChild(e)}
+ document.querySelectorAll(".adsbygoogle").forEach(()=>{try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(x){}})}
+function top(){
+ $("nav").innerHTML=`<button data-a="cat" data-v="" class="${cat?"":"on"}">Início</button>`+CATS.map(c=>`<button data-a="cat" data-v="${c}" class="${cat===c?"on":""}">${c}</button>`).join("");
+ $("#acct").innerHTML=user?(isAdm()?'<button class="btn" data-a="adm">Adm</button>':"")+'<button class="btn g" data-a="out">Sair</button>':'<button class="btn" data-a="login">Entrar</button>';
+ $("#ban").hidden=!(user&&adm.includes((user.email||"").toLowerCase())&&!user.emailVerified);
+}
+function home(){
+ const list=cat?posts.filter(p=>p.category===cat):posts;
+ if(!list.length)return `<div class="empty"><h2>Nenhuma postagem por aqui</h2><p>${isAdm()?"Abra o painel Adm e publique a primeira.":"Volte em breve para ler as novidades."}</p></div>`;
+ const f=cat?null:(list.find(p=>p.featured)||list[0]);
+ const rest=list.filter(p=>p!==f);
+ const n=c=>posts.filter(p=>p.category===c).length;
+ const it=rest.map(card),m=ad("meio"),al=ad("lateral"),lk=extras.filter(x=>x.type==="link"&&safe(x.url));if(m&&it.length>1)it.splice(2,0,m);
+ return (f?`<section class="hero"><div><span class="tag">${esc(f.category)}</span><h1>${esc(f.title)}</h1><p class="mut">${esc(f.summary)}</p><a class="btn" href="#/post/${f.id}" style="display:inline-block">Ler matéria</a></div><a href="#/post/${f.id}" aria-label="${esc(f.title)}">${th(f)}</a></section>`:`<h2 style="margin-top:36px">${esc(cat)}</h2>`)+
+ `<div class="main"><section><h2>Últimas publicações</h2><div class="grid">${it.join("")||'<p class="mut">Sem outras postagens nesta categoria.</p>'}</div></section>
+ <aside>${al?`<div class="box">${al}</div>`:""}<div class="box"><h3>Categorias</h3><div class="chips">${CATS.map(c=>`<button class="chip ${cat===c?"on":""}" data-a="cat" data-v="${c}">${c} (${n(c)})</button>`).join("")}</div></div>
+ ${lk.length?`<div class="box"><h3>Links úteis</h3><ul class="lk">${lk.map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></li>`).join("")}</ul></div>`:""}<div class="box"><h3>Sobre o blog</h3><p class="mut">Notícias, trailers, rumores e guias de GTA 6, com a fonte sempre à vista.</p></div></aside></div>`;
+}
+function article(p){
+ document.title=p.title+" - DenisZer0 Notícias";
+ return `<article class="art"><a class="back" href="#/">Voltar às notícias</a><br><span class="tag">${esc(p.category)}</span><h1>${esc(p.title)}</h1><p class="mut">${fd(p)}</p>${th(p)}${body(p.content)}${ad("fim")}${isAdm()?`<button class="btn g" data-a="edit" data-id="${p.id}">Editar esta postagem</button>`:""}</article>`;
+}
+function render(){
+ top();
+ const id=location.hash.match(/^#\/post\/(.+)$/)?.[1],p=id&&posts.find(x=>x.id===id);
+ if(!p)document.title="DenisZer0 Notícias - GTA 6";
+ $("#app").innerHTML=ad("topo")+(p?article(p):home());initAds();
+ if($("#adm").open){admList();xList()}
+}
+function admList(){$("#admList").innerHTML=posts.map(p=>`<div class="row"><span>${esc(p.title)}</span><span><button class="btn g" data-a="edit" data-id="${p.id}">Editar</button> <button class="btn g" data-a="del" data-id="${p.id}">Excluir</button></span></div>`).join("")||'<p class="mut">Nenhuma postagem.</p>'}
+const atab=v=>{$("#ppane").hidden=v!=="p";$("#xpane").hidden=v!=="x";document.querySelectorAll("#atabs .chip").forEach(c=>c.classList.toggle("on",c.dataset.v===v))};
+function xList(){$("#xList").innerHTML=extras.map(x=>`<div class="row"><span>${x.type==="ad"?"Anúncio":"Link"}: ${esc(x.title)}</span><span><button class="btn g" data-a="xedit" data-id="${x.id}">Editar</button> <button class="btn g" data-a="xdel" data-id="${x.id}">Excluir</button></span></div>`).join("")||'<p class="mut">Nada cadastrado.</p>'}
+function xfill(x){xedit=x?.id||null;const f=$("#xf").elements;$("#xft").textContent=x?"Editar anúncio ou link":"Novo anúncio ou link";f.type.value=x?.type||"ad";f.title.value=x?.title||"";f.url.value=x?.url||"";f.image.value=x?.image||"";f.slot.value=x?.slot||"lateral"}
+function mklink(){const t=$("#b"),a=t.selectionStart,z=t.selectionEnd,txt=prompt("Texto do link",t.value.slice(a,z));if(!txt)return;const u=prompt("Endereço (começa com https://)","https://");if(!safe(u))return toast("O endereço precisa começar com https://");t.setRangeText(`[${txt}](${u.trim()})`,a,z,"end");t.focus()}
+function fill(p){editing=p?.id||null;const f=$("#pf");$("#pft").textContent=p?"Editar postagem":"Nova postagem";f.title.value=p?.title||"";f.category.value=p?.category||CATS[0];f.image.value=p?.image||"";f.summary.value=p?.summary||"";f.content.value=p?.content||"";f.featured.checked=!!p?.featured}
+function openAdm(p){if(!isAdm())return;$("#c").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");fill(p);xfill(null);atab("p");if(!$("#adm").open)$("#adm").showModal();admList();xList()}
+
+const ERR={"auth/invalid-credential":"E-mail ou senha incorretos.","auth/email-already-in-use":"Este e-mail já tem conta. Use Entrar.","auth/weak-password":"Use uma senha com 6 ou mais caracteres.","auth/invalid-email":"E-mail inválido.","auth/too-many-requests":"Muitas tentativas. Aguarde um pouco."};
+const fail=x=>{if(x.code!=="auth/popup-closed-by-user"&&x.code!=="auth/cancelled-popup-request")toast(ERR[x.code]||"Não foi possível concluir. Tente de novo.")};
+const need=()=>{if(live)return false;toast("Preencha o firebaseConfig no arquivo para ativar o login.");return true};
+
+document.addEventListener("click",async e=>{
+ const b=e.target.closest("[data-a]");if(!b)return;
+ const a=b.dataset.a,v=b.dataset.v,id=b.dataset.id;
+ try{
+ if(a==="cat"){cat=v;if(location.hash!=="#/")location.hash="#/";render()}
+ else if(a==="login"){if(!need())$("#auth").showModal()}
+ else if(a==="close")b.closest("dialog").close();
+ else if(a==="tab"){mode=v;document.querySelectorAll("#af .tabs .chip").forEach(x=>x.classList.toggle("on",x===b));$("#go").textContent=v==="in"?"Entrar":"Criar conta"}
+ else if(a==="google"){await signInWithPopup(auth,new GoogleAuthProvider());$("#auth").close()}
+ else if(a==="reset"){const m=$("#em").value.trim();if(!m)return toast("Digite seu e-mail acima.");await sendPasswordResetEmail(auth,m);toast("Enviamos o link de redefinição.")}
+ else if(a==="out"){await signOut(auth)}
+ else if(a==="adm")openAdm();
+ else if(a==="new")fill(null);
+ else if(a==="atab")atab(v);
+ else if(a==="xnew")xfill(null);
+ else if(a==="xedit")xfill(extras.find(x=>x.id===id));
+ else if(a==="xdel"){if(isAdm()&&confirm("Excluir este item?")){await deleteDoc(doc(db,"extras",id));if(xedit===id)xfill(null);toast("Item excluído.")}}
+ else if(a==="mklink")mklink();
+ else if(a==="edit")openAdm(posts.find(p=>p.id===id));
+ else if(a==="del"){if(isAdm()&&confirm("Excluir esta postagem?")){await deleteDoc(doc(db,"posts",id));if(editing===id)fill(null);toast("Postagem excluída.")}}
+ else if(a==="resend"){await sendEmailVerification(user);toast("E-mail de verificação enviado.")}
+ else if(a==="reload"){await user.reload();await user.getIdToken(true);render()}
+ }catch(x){fail(x)}
+});
+$("#af").addEventListener("submit",async e=>{e.preventDefault();const m=$("#em").value.trim(),p=$("#pw").value;
+ try{if(mode==="new"){const c=await createUserWithEmailAndPassword(auth,m,p);await sendEmailVerification(c.user);toast("Conta criada. Confira seu e-mail para verificar.")}else await signInWithEmailAndPassword(auth,m,p);$("#auth").close();e.target.reset()}catch(x){fail(x)}});
+$("#xf").addEventListener("submit",async e=>{e.preventDefault();if(!isAdm())return;const f=e.target.elements,url=safe(f.url.value.trim());if(!url)return toast("O link precisa começar com https://");
+ const d={type:f.type.value,title:f.title.value.trim(),url,image:safe(f.image.value.trim()),slot:f.slot.value,updatedAt:serverTimestamp()};
+ try{if(xedit)await updateDoc(doc(db,"extras",xedit),d);else await addDoc(collection(db,"extras"),{...d,createdAt:serverTimestamp()});toast("Salvo.");xfill(null)}catch(x){toast("Não foi possível salvar. Atualize as regras do Firestore.")}});
+$("#pf").addEventListener("submit",async e=>{e.preventDefault();if(!isAdm())return;const f=e.target;
+ const d={title:f.title.value.trim(),category:f.category.value,image:safe(f.image.value.trim()),summary:f.summary.value.trim(),content:f.content.value.trim(),featured:f.featured.checked,updatedAt:serverTimestamp()};
+ try{if(editing)await updateDoc(doc(db,"posts",editing),d);else await addDoc(collection(db,"posts"),{...d,createdAt:serverTimestamp(),author:user.email});toast("Postagem salva.");fill(null)}catch(x){toast("Não foi possível salvar. Confira as regras do Firestore.")}});
+addEventListener("hashchange",()=>{scrollTo(0,0);render()});
+
+if(live){
+ onAuthStateChanged(auth,u=>{user=u;render()});
+ onSnapshot(query(collection(db,"posts"),orderBy("createdAt","desc")),s=>{posts=s.docs.map(d=>({id:d.id,...d.data()}));render()},()=>toast("Não foi possível carregar as postagens."));
+ onSnapshot(collection(db,"extras"),s=>{extras=s.docs.map(d=>({id:d.id,...d.data()}));render()},()=>{});
+}
+render();
+</script>
+</body>
+</html>
