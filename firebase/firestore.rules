@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Troque pelo e-mail de admin (o mesmo de ADMINS no index.html)
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email == 'seu-email@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    function validPost() {
+      let d = request.resource.data;
+      return d.title is string && d.title.size() > 0 && d.title.size() <= 140
+        && d.category in ['Notícias', 'Trailers', 'Rumores', 'Guias', 'Análises']
+        && d.summary is string && d.summary.size() <= 220
+        && d.content is string && d.content.size() > 0 && d.content.size() <= 50000
+        && d.image is string
+        && d.featured is bool;
+    }
+
+    function validExtra() {
+      let d = request.resource.data;
+      return d.type in ['ad', 'link']
+        && d.title is string && d.title.size() > 0 && d.title.size() <= 140
+        && d.url is string && d.url.matches('https?://.*')
+        && d.image is string
+        && d.slot in ['topo', 'lateral', 'meio', 'fim'];
+    }
+
+    match /extras/{extraId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && validExtra();
+      allow delete: if isAdmin();
+    }
+
+    match /posts/{postId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && validPost();
+      allow delete: if isAdmin();
+    }
+
+    // Todo o resto fica bloqueado
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
